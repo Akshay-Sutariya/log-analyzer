@@ -29,3 +29,8 @@ A Python-based log analyzer that reads Linux SSH authentication logs, extracts f
 
 ```bash
 python3 log_analyzer_v2.py
+
+👨‍💻 Author
+Akshay Sutariya
+
+This project is part of my Cybersecurity Automation learning journey (Day 3).
