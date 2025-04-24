@@ -1,4 +1,4 @@
-# Log Analyzer (Day 3 Project)
+# Log Analyzer 
 
 A Python-based log analyzer that reads Linux SSH authentication logs, extracts failed login attempts, and identifies top attacking IP addresses using regular expressions.
 
@@ -15,7 +15,7 @@ A Python-based log analyzer that reads Linux SSH authentication logs, extracts f
 
 | File               | Description                              |
 |--------------------|------------------------------------------|
-| `log_analyzer_v2.py` | Main Python script                      |
+| `log_analyzer.py` | Main Python script                      |
 | `auth.log`         | Sample SSH log for testing               |
 | `failed_logins.txt`| Output: All failed login attempts found  |
 | `README.md`        | This documentation file                  |
@@ -28,4 +28,4 @@ A Python-based log analyzer that reads Linux SSH authentication logs, extracts f
 ## 🧪 How to Use
 
 ```bash
-python3 log_analyzer_v2.py
+python3 log_analyzer.py
