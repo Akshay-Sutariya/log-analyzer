@@ -1,24 +1,107 @@
-# Log Analyzer 
+# Log Analyzer  🛡️
 
-A Python-based log analyzer that reads Linux SSH authentication logs, extracts failed login attempts, and identifies top attacking IP addresses using regular expressions.
+A Python-based log analysis tool to detect and analyze failed login attempts from `auth.log` files.  
+This tool helps cybersecurity analysts quickly identify top offending IPs, usernames, and geographical locations using GeoIP integration.
+
+---
+
+## 📂 Project Structure
+
+```
+log-analyzer/
+├── auth.log               # Sample SSH log file for testing
+├── log_analyzer_v2.py     # Basic failed login extraction
+├── log_analyzer_v3.py     # Top 5 IPs and user attempts
+├── log_analyzer_v4.py     # GeoIP location added to analysis
+├── README.md              # Project documentation
+```
+
+---
 
 ## 🚀 Features
 
-- Filters failed SSH login attempts from `auth.log`
-- Extracts:
-  - IP addresses
-  - Usernames (valid/invalid users)
-- Shows top IPs by number of failed attempts
-- Saves filtered logs to `failed_logins.txt`
+- Extracts failed SSH login attempts.
+- Lists IP addresses and usernames.
+- Displays the top offending IP addresses.
+- GeoIP integration: Find country and city of attackers.
+- Output results into a text file (optional).
 
-## 📁 Files
+---
 
-| File               | Description                              |
-|--------------------|------------------------------------------|
-| `log_analyzer.py` | Main Python script                      |
-| `auth.log`         | Sample SSH log for testing               |
-| `failed_logins.txt`| Output: All failed login attempts found  |
-| `README.md`        | This documentation file                  |
+## ⚙️ How to Use
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Akshay-Sutariya/log-analyzer.git
+   cd log-analyzer
+   ```
+
+2. **Install the required library:**
+   ```bash
+   pip install geoip2
+   ```
+
+3. **Download GeoLite2 City Database:**
+   - Download from [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data).
+   - Place the `.mmdb` file in your project directory.
+
+4. **Run the Analyzer:**
+   ```bash
+   python log_analyzer_v4.py
+   ```
+
+---
+
+## ✨ Version Highlights
+
+| Version | Changes |
+| :------ | :------ |
+| V2 | Extracted failed login attempts (IP + username) |
+| V3 | Counted and displayed top 5 offending IPs |
+| V4 | Integrated GeoIP database to locate IP addresses (Country, City) |
+
+---
+
+## 📄 Example Output (Version 4)
+
+```
+Top 5 Offending IP Addresses:
+1. 192.168.1.10 - 5 attempts - United States, New York
+2. 45.90.12.34 - 3 attempts - India, Mumbai
+...
+
+All Failed Login Attempts are saved in failed_logins.txt
+```
+
+---
+
+## 📚 Requirements
+
+- Python 3.x
+- `geoip2` library
+- GeoLite2-City.mmdb (database file)
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!  
+For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 🔗 Connect with Me
+
+- LinkedIn: [Akshay Sutariya](https://www.linkedin.com/in/akshay-sutariya2404/)
+- GitHub: [Akshay-Sutariya](https://github.com/Akshay-Sutariya)
+
+---
 
 ## 📦 Requirements
 
