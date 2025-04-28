@@ -91,10 +91,9 @@ All Failed Login Attempts are saved in failed_logins.txt
 Install external dependencies:
 ```bash
 pip install geoip2
-
+```
 
 ---
-
 
 
 ## 🤝 Contributing
