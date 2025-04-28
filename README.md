@@ -13,6 +13,7 @@ log-analyzer/
 ├── log_analyzer_v2.py     # Basic failed login extraction
 ├── log_analyzer_v3.py     # Top 5 IPs and user attempts
 ├── log_analyzer_v4.py     # GeoIP location added to analysis
+├── log_analyzer_v5.py     # Email alert added for fast action
 ├── README.md              # Project documentation
 ```
 
@@ -24,6 +25,7 @@ log-analyzer/
 - Lists IP addresses and usernames.
 - Displays the top offending IP addresses.
 - GeoIP integration: Find country and city of attackers.
+- Send email alert to admin if threshold is exceed.
 - Output results into a text file (optional).
 
 ---
@@ -59,6 +61,7 @@ log-analyzer/
 | V2 | Extracted failed login attempts (IP + username) |
 | V3 | Counted and displayed top 5 offending IPs |
 | V4 | Integrated GeoIP database to locate IP addresses (Country, City) |
+| V5 | Set an email alert to admin if threshold exceeded for one ip address |
 
 ---
 
@@ -73,21 +76,25 @@ Top 5 Offending IP Addresses:
 All Failed Login Attempts are saved in failed_logins.txt
 ```
 
+
 ---
 
-## 📚 Requirements
+## ⚙️ Requirements:
 
 - Python 3.x
-- `geoip2` library
-- GeoLite2-City.mmdb (database file)
+- `smtplib` (built-in for emails)
+- `email` (built-in)
+- `argparse` (built-in)
+- `geoip2` (install via pip)
+- `re` and `os` (built-in)
+
+Install external dependencies:
+```bash
+pip install geoip2
+
 
 ---
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## 🤝 Contributing
 
@@ -103,10 +110,6 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ---
 
-## 📦 Requirements
-
-- Python 3.x  
-- Works on Kali Linux (or any Linux system with `auth.log`)
 
 ## 🧪 How to Use
 
