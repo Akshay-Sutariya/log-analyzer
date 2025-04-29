@@ -14,6 +14,7 @@ log-analyzer/
 ├── log_analyzer_v3.py     # Top 5 IPs and user attempts
 ├── log_analyzer_v4.py     # GeoIP location added to analysis
 ├── log_analyzer_v5.py     # Email alert added for fast action
+├── log_analyzer_v6.py     # Auto ip blocking using iptables
 ├── README.md              # Project documentation
 ```
 
@@ -26,6 +27,7 @@ log-analyzer/
 - Displays the top offending IP addresses.
 - GeoIP integration: Find country and city of attackers.
 - Send email alert to admin if threshold is exceed.
+- Auto block ips if set threshold is exceeded.
 - Output results into a text file (optional).
 
 ---
@@ -62,22 +64,10 @@ log-analyzer/
 | V3 | Counted and displayed top 5 offending IPs |
 | V4 | Integrated GeoIP database to locate IP addresses (Country, City) |
 | V5 | Set an email alert to admin if threshold exceeded for one ip address |
+| V6| Auto block suspicious ip after alerting admin |
 
 ---
 
-## 📄 Example Output (Version 4)
-
-```
-Top 5 Offending IP Addresses:
-1. 192.168.1.10 - 5 attempts - United States, New York
-2. 45.90.12.34 - 3 attempts - India, Mumbai
-...
-
-All Failed Login Attempts are saved in failed_logins.txt
-```
-
-
----
 
 ## ⚙️ Requirements:
 
@@ -87,6 +77,8 @@ All Failed Login Attempts are saved in failed_logins.txt
 - `argparse` (built-in)
 - `geoip2` (install via pip)
 - `re` and `os` (built-in)
+- `subprocess` (built-in)
+- `PrettyTable` (built-in)
 
 Install external dependencies:
 ```bash
