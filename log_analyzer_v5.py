@@ -14,7 +14,7 @@ reader = geoip2.database.Reader("GeoLite2-City.mmdb")
 # Email setup
 sender_email = "akshaysutariya8@gmail.com"
 receiver_email = "akshaysutariya8@gmail.com"
-password = "qnfk togs zspy gprw"  # Not your Gmail password!
+password = "abc def ghi jkl"  # Not your Gmail password!
 THRESHOLD = 2
 
 # Show help and handle errors 
