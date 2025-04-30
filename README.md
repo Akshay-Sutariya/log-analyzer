@@ -10,11 +10,12 @@ This tool helps cybersecurity analysts quickly identify top offending IPs, usern
 ```
 log-analyzer/
 ├── auth.log               # Sample SSH log file for testing
-├── log_analyzer_v2.py     # Basic failed login extraction
-├── log_analyzer_v3.py     # Top 5 IPs and user attempts
+├── log_analyzer_v2.py     # added Basic failed login extraction
+├── log_analyzer_v3.py     # added show Top 5 IPs attempts
 ├── log_analyzer_v4.py     # GeoIP location added to analysis
 ├── log_analyzer_v5.py     # Email alert added for fast action
-├── log_analyzer_v6.py     # Auto ip blocking using iptables
+├── log_analyzer_v6.py     # added Auto ip blocking using iptables
+├── log_analyzer_v7.py     # added Gnerate HTML report
 ├── README.md              # Project documentation
 ```
 
@@ -28,6 +29,7 @@ log-analyzer/
 - GeoIP integration: Find country and city of attackers.
 - Send email alert to admin if threshold is exceed.
 - Auto block ips if set threshold is exceeded.
+- Gnerate clean HTML report and show after scan.
 - Output results into a text file (optional).
 
 ---
@@ -64,7 +66,8 @@ log-analyzer/
 | V3 | Counted and displayed top 5 offending IPs |
 | V4 | Integrated GeoIP database to locate IP addresses (Country, City) |
 | V5 | Set an email alert to admin if threshold exceeded for one ip address |
-| V6| Auto block suspicious ip after alerting admin |
+| V6 |  Auto block suspicious ip after alerting admin |
+| V7 |  Added Gnerate HTML report |
 
 ---
 
@@ -79,6 +82,7 @@ log-analyzer/
 - `re` and `os` (built-in)
 - `subprocess` (built-in)
 - `PrettyTable` (built-in)
+- `webbrowser` (built-in)
 
 Install external dependencies:
 ```bash
