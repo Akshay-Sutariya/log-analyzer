@@ -16,7 +16,7 @@ log-analyzer/
 ├── log_analyzer_v5.py     # Email alert added for fast action
 ├── log_analyzer_v6.py     # added Auto ip blocking using iptables
 ├── log_analyzer_v7.py     # added Gnerate HTML report
-├── log_analyzer_v7.py     # added Fetch AbuseIPDB Score using API
+├── log_analyzer_v8.py     # added Fetch AbuseIPDB Score using API
 ├── README.md              # Project documentation
 ```
 
