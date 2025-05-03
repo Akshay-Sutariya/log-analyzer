@@ -16,6 +16,7 @@ log-analyzer/
 ├── log_analyzer_v5.py     # Email alert added for fast action
 ├── log_analyzer_v6.py     # added Auto ip blocking using iptables
 ├── log_analyzer_v7.py     # added Gnerate HTML report
+├── log_analyzer_v7.py     # added Fetch AbuseIPDB Score using API
 ├── README.md              # Project documentation
 ```
 
@@ -30,6 +31,7 @@ log-analyzer/
 - Send email alert to admin if threshold is exceed.
 - Auto block ips if set threshold is exceeded.
 - Gnerate clean HTML report and show after scan.
+- Fetch AbuseIPDB Score using API
 - Output results into a text file (optional).
 
 ---
@@ -42,16 +44,11 @@ log-analyzer/
    cd log-analyzer
    ```
 
-2. **Install the required library:**
-   ```bash
-   pip install geoip2
-   ```
-
-3. **Download GeoLite2 City Database:**
+2. **Download GeoLite2 City Database:**
    - Download from [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data).
    - Place the `.mmdb` file in your project directory.
 
-4. **Run the Analyzer:**
+3. **Run the Analyzer:**
    ```bash
    python log_analyzer_v4.py
    ```
@@ -66,8 +63,9 @@ log-analyzer/
 | V3 | Counted and displayed top 5 offending IPs |
 | V4 | Integrated GeoIP database to locate IP addresses (Country, City) |
 | V5 | Set an email alert to admin if threshold exceeded for one ip address |
-| V6 |  Auto block suspicious ip after alerting admin |
-| V7 |  Added Gnerate HTML report |
+| V6 | Auto block suspicious ip after alerting admin |
+| V7 | Added Gnerate HTML report |
+| V8 | added Fetch AbuseIPDB Score using API |
 
 ---
 
@@ -87,6 +85,7 @@ log-analyzer/
 Install external dependencies:
 ```bash
 pip install geoip2
+pip install requests
 ```
 
 ---
