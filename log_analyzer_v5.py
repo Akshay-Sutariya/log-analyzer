@@ -12,8 +12,8 @@ from collections import Counter
 reader = geoip2.database.Reader("GeoLite2-City.mmdb")
 
 # Email setup
-sender_email = "akshaysutariya8@gmail.com"
-receiver_email = "akshaysutariya8@gmail.com"
+sender_email = "sender@gmail.com"
+receiver_email = "reciever@gmail.com"
 password = "abc def ghi jkl"  # Not your Gmail password!
 THRESHOLD = 2
 
